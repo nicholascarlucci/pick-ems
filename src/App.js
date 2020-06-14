@@ -1,6 +1,6 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
@@ -24,3 +24,10 @@ function App() {
 }
 
 export default App;
+
+// step1: create mockups
+// step2: start building components
+// step3: add routing/create routes
+// step4: setting up server/db
+// step5: login/user profile/userdata
+// step6: apis integrated to pull relevant data (nfl shield)
