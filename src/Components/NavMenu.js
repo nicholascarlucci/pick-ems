@@ -17,6 +17,7 @@ export default class MenuExampleBasic extends Component {
           active={activeItem === "home"}
           onClick={this.handleItemClick}
           link={true}
+          href={"/"}
         >
           Home
         </Menu.Item>
@@ -26,6 +27,7 @@ export default class MenuExampleBasic extends Component {
           active={activeItem === "picks"}
           onClick={this.handleItemClick}
           link={true}
+          href={"/picks"}
         >
           Picks
         </Menu.Item>
