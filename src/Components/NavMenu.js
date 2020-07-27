@@ -29,7 +29,7 @@ export default class MenuExampleBasic extends Component {
           link={true}
           href={"/picks"}
         >
-          Picks
+          My Picks
         </Menu.Item>
       </Menu>
     );

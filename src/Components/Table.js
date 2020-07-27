@@ -1,103 +1,53 @@
 import React from "react";
-import { useTable } from "react-table";
+import { Icon, Menu, Table } from "semantic-ui-react";
 
-function StandingsTable() {
-  const data = React.useMemo(
-    () => [
-      {
-        col1: "Team 1",
-        col2: 8,
-        col3: 2,
-      },
-      {
-        col1: "Team 2",
-        col2: 3,
-        col3: 7,
-      },
-      {
-        col1: "Team 3",
-        col2: 4,
-        col3: 4,
-      },
-    ],
-    []
-  );
+const StandingsTable = () => (
+  <Table celled>
+    <Table.Header>
+      <Table.Row>
+        <Table.HeaderCell>Team Name</Table.HeaderCell>
+        <Table.HeaderCell>Wins</Table.HeaderCell>
+        <Table.HeaderCell>Losses</Table.HeaderCell>
+      </Table.Row>
+    </Table.Header>
 
-  const columns = React.useMemo(
-    () => [
-      {
-        Header: "Team",
-        accessor: "col1", // accessor is the "key" in the data
-      },
-      {
-        Header: "Wins",
-        accessor: "col2",
-      },
-      {
-        Header: "Losses",
-        accessor: "col3",
-      },
-    ],
-    []
-  );
+    <Table.Body>
+      <Table.Row>
+        <Table.Cell>ButtMunchers</Table.Cell>
+        <Table.Cell>4</Table.Cell>
+        <Table.Cell>3</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>SquiddlyDiddlies</Table.Cell>
+        <Table.Cell>2</Table.Cell>
+        <Table.Cell>5</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>Foosballers</Table.Cell>
+        <Table.Cell>5</Table.Cell>
+        <Table.Cell>2</Table.Cell>
+      </Table.Row>
+    </Table.Body>
 
-  const {
-    getTableProps,
-    getTableBodyProps,
-    headerGroups,
-    rows,
-    prepareRow,
-  } = useTable({ columns, data });
-
-  return (
-    <table
-      {...getTableProps()}
-      style={{ border: "solid 1px blue", width: "40%", margin: "2em auto" }}
-    >
-      <thead>
-        {headerGroups.map((headerGroup) => (
-          <tr {...headerGroup.getHeaderGroupProps()}>
-            {headerGroup.headers.map((column) => (
-              <th
-                {...column.getHeaderProps()}
-                style={{
-                  borderBottom: "solid 3px red",
-                  background: "aliceblue",
-                  color: "black",
-                  fontWeight: "bold",
-                }}
-              >
-                {column.render("Header")}
-              </th>
-            ))}
-          </tr>
-        ))}
-      </thead>
-      <tbody {...getTableBodyProps()}>
-        {rows.map((row) => {
-          prepareRow(row);
-          return (
-            <tr {...row.getRowProps()}>
-              {row.cells.map((cell) => {
-                return (
-                  <td
-                    {...cell.getCellProps()}
-                    style={{
-                      padding: "10px",
-                      border: "solid 1px gray",
-                      background: "papayawhip",
-                    }}
-                  >
-                    {cell.render("Cell")}
-                  </td>
-                );
-              })}
-            </tr>
-          );
-        })}
-      </tbody>
-    </table>
-  );
-}
+    <Table.Footer>
+      <Table.Row>
+        <Table.HeaderCell colSpan="3">
+          <Menu floated="right" pagination>
+            <Menu.Item as="a" icon>
+              <Icon name="chevron left" />
+            </Menu.Item>
+            <Menu.Item as="a">1</Menu.Item>
+            <Menu.Item as="a">2</Menu.Item>
+            <Menu.Item as="a">3</Menu.Item>
+            <Menu.Item as="a">4</Menu.Item>
+            <Menu.Item as="a" icon>
+              <Icon name="chevron right" />
+            </Menu.Item>
+          </Menu>
+        </Table.HeaderCell>
+      </Table.Row>
+    </Table.Footer>
+  </Table>
+);
 
 export default StandingsTable;

@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import StandingsTable from "./Components/Table";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Picks from "./Components/Picks";
 import NavMenu from "./Components/NavMenu";
 
@@ -26,10 +26,14 @@ function App() {
         <Switch>
           {/* default route */}
           <Route exact path="/">
-            <StandingsTable />
+            <div style={{ padding: "1em" }} className="container">
+              <StandingsTable />
+            </div>
           </Route>
           <Route exact path="/picks">
-            <Picks />
+            <div style={{ padding: "1em" }} className="container">
+              <Picks />
+            </div>
           </Route>
         </Switch>
       </div>

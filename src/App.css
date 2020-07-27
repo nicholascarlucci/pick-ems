@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+/* Overrides for Semantic UI CSS */
+.ui.menu {
+  border-radius: 0 !important;
+}
