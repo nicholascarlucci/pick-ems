@@ -37,7 +37,10 @@
   }
 }
 
-/* Overrides for Semantic UI CSS */
+/******** Overrides for Semantic UI CSS ********/
+
 .ui.menu {
   border-radius: 0 !important;
 }
+
+/******** END OVERRIDES **********/
