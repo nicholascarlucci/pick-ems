@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import StandingsTable from "./Components/Table";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Picks from "./Components/Picks";
+import PicksTable from "./Components/Picks";
 import NavMenu from "./Components/NavMenu";
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
           </Route>
           <Route exact path="/picks">
             <div style={{ padding: "1em" }} className="container">
-              <Picks />
+              <PicksTable />
             </div>
           </Route>
         </Switch>
