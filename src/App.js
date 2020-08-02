@@ -4,6 +4,7 @@ import StandingsTable from "./Components/Table";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import PicksTable from "./Components/Picks";
 import NavMenu from "./Components/NavMenu";
+import Teams from "./Components/Teams";
 
 function App() {
   return (
@@ -22,6 +23,11 @@ function App() {
           <Route exact path="/picks">
             <div style={{ padding: "1em" }} className="container">
               <PicksTable />
+            </div>
+          </Route>
+          <Route exact path="/teams">
+            <div style={{ padding: "1em" }} className="container">
+              <Teams />
             </div>
           </Route>
         </Switch>

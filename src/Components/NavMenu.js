@@ -31,6 +31,16 @@ export default class MenuExampleBasic extends Component {
         >
           My Picks
         </Menu.Item>
+
+        <Menu.Item
+          name="teams"
+          active={activeItem === "teams"}
+          onClick={this.handleItemClick}
+          link={true}
+          href={"/teams"}
+        >
+          DB Testing
+        </Menu.Item>
       </Menu>
     );
   }
