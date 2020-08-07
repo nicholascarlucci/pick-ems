@@ -32,7 +32,7 @@ class StandingsTable extends React.Component {
 
         <Table.Body>
           {this.state.teams.map((team, index) => (
-            <Table.Row>
+            <Table.Row  key={team.id}>
               <Table.Cell>{team.name}</Table.Cell>
               <Table.Cell>{team.wins}</Table.Cell>
               <Table.Cell>{team.losses}</Table.Cell>

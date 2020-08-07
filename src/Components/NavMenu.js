@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import { Menu } from "semantic-ui-react";
 
-export default class MenuExampleBasic extends Component {
+export default class MenuExampleBasic extends React.Component {
   state = {};
 
   handleItemClick = (e, { name }) =>
