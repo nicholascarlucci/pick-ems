@@ -48,7 +48,7 @@ function Teams() {
   }
   return (
     <div>
-      {teams ? teams : "There is no merchant data available"}
+      {teams ? teams : "There is no teams data available"}
       <br />
       <button onClick={createTeam}>Add team</button>
       <br />

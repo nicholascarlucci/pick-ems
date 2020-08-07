@@ -5,13 +5,18 @@ import { Table } from "semantic-ui-react";
 class StandingsTable extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {teams: [{name: "Something", wins: 1, losses: 6}]};
+    this.state = {teams: []};
   }
 
   async componentDidMount() {
-    const response = await fetch("http://localhost:3001");
-    const json = await response.json();
-    this.setState({teams: json});
+    try {
+      const response = await fetch("http://localhost:3001");
+      const json = await response.json();
+      this.setState({teams: json});
+    } catch(error) {
+      console.log(error);
+    }
+    
   }
 
   render(){
