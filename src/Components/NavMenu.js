@@ -1,11 +1,16 @@
-import React from "react";
-import { Menu } from "semantic-ui-react";
+/* eslint-disable react/jsx-filename-extension */
+import React from 'react';
+import { Menu } from 'semantic-ui-react';
 
-export default class MenuExampleBasic extends React.Component {
-  state = {};
+class NavMenu extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
 
-  handleItemClick = (e, { name }) =>
-    this.setState({ activeItem: name, routePath: "/" + name });
+  handleItemClick(e, { name }) {
+    this.setState({ activeItem: name });
+  }
 
   render() {
     const { activeItem } = this.state;
@@ -14,30 +19,30 @@ export default class MenuExampleBasic extends React.Component {
       <Menu>
         <Menu.Item
           name="home"
-          active={activeItem === "home"}
+          active={activeItem === 'home'}
           onClick={this.handleItemClick}
-          link={true}
-          href={"/"}
+          link
+          href="/"
         >
           Home
         </Menu.Item>
 
         <Menu.Item
           name="picks"
-          active={activeItem === "picks"}
+          active={activeItem === 'picks'}
           onClick={this.handleItemClick}
-          link={true}
-          href={"/picks"}
+          link
+          href="/picks"
         >
           My Picks
         </Menu.Item>
 
         <Menu.Item
           name="teams"
-          active={activeItem === "teams"}
+          active={activeItem === 'teams'}
           onClick={this.handleItemClick}
-          link={true}
-          href={"/teams"}
+          link
+          href="/teams"
         >
           DB Testing
         </Menu.Item>
@@ -45,3 +50,5 @@ export default class MenuExampleBasic extends React.Component {
     );
   }
 }
+
+export default NavMenu;

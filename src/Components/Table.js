@@ -1,25 +1,26 @@
-import React from "react";
-import { Table } from "semantic-ui-react";
-
+/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable react/destructuring-assignment */
+import React from 'react';
+import { Table } from 'semantic-ui-react';
 
 class StandingsTable extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {teams: []};
+    this.state = { teams: [] };
   }
 
   async componentDidMount() {
     try {
-      const response = await fetch("http://localhost:3001");
+      const response = await fetch('http://localhost:3001');
       const json = await response.json();
-      this.setState({teams: json});
-    } catch(error) {
+      this.setState({ teams: json });
+    } catch (error) {
+      // eslint-disable-next-line no-console
       console.log(error);
     }
-    
   }
 
-  render(){
+  render() {
     return (
       <Table celled>
         <Table.Header>
@@ -31,8 +32,8 @@ class StandingsTable extends React.Component {
         </Table.Header>
 
         <Table.Body>
-          {this.state.teams.map((team, index) => (
-            <Table.Row  key={team.id}>
+          {this.state.teams.map((team) => (
+            <Table.Row key={team.id}>
               <Table.Cell>{team.name}</Table.Cell>
               <Table.Cell>{team.wins}</Table.Cell>
               <Table.Cell>{team.losses}</Table.Cell>

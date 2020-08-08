@@ -1,58 +1,54 @@
-import React, { useState, useEffect } from "react";
+/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable no-alert */
+import React, { useState, useEffect } from 'react';
 
 function Teams() {
   const [teams, setTeams] = useState(false);
-  useEffect(() => {
-    getTeam();
-  }, []);
   function getTeam() {
-    fetch("http://localhost:3001")
-      .then((response) => {
-        return response.text();
-      })
+    fetch('http://localhost:3001')
+      .then((response) => response.text())
       .then((data) => {
         setTeams(data);
       });
   }
   function createTeam() {
-    let name = prompt("Enter team name");
-    let wins = prompt("Enter team wins");
-    let losses = prompt("Enter team losses");
-    fetch("http://localhost:3001/teams", {
-      method: "POST",
+    const name = prompt('Enter team name');
+    const wins = prompt('Enter team wins');
+    const losses = prompt('Enter team losses');
+    fetch('http://localhost:3001/teams', {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({ name, wins, losses }),
     })
-      .then((response) => {
-        return response.text();
-      })
+      .then((response) => response.text())
       .then((data) => {
         alert(data);
         getTeam();
       });
   }
   function deleteTeam() {
-    let id = prompt("Enter team id");
+    const id = prompt('Enter team id');
     fetch(`http://localhost:3001/teams/${id}`, {
-      method: "DELETE",
+      method: 'DELETE',
     })
-      .then((response) => {
-        return response.text();
-      })
+      .then((response) => response.text())
       .then((data) => {
         alert(data);
         getTeam();
       });
   }
+  useEffect(() => {
+    getTeam();
+  }, []);
   return (
     <div>
-      {teams ? teams : "There is no teams data available"}
+      {teams || 'There is no teams data available'}
       <br />
-      <button onClick={createTeam}>Add team</button>
+      <button type="button" onClick={createTeam}>Add team</button>
       <br />
-      <button onClick={deleteTeam}>Delete team</button>
+      <button type="button" onClick={deleteTeam}>Delete team</button>
     </div>
   );
 }
