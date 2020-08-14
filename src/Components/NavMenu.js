@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-filename-extension */
-import React from "react";
-import { Menu } from "semantic-ui-react";
+import React from 'react';
+import { Menu } from 'semantic-ui-react';
 
 class NavMenu extends React.Component {
   constructor(props) {
@@ -19,7 +19,7 @@ class NavMenu extends React.Component {
       <Menu>
         <Menu.Item
           name="home"
-          active={activeItem === "home"}
+          active={activeItem === 'home'}
           onClick={this.handleItemClick}
           link
           href="/"
@@ -29,7 +29,7 @@ class NavMenu extends React.Component {
 
         <Menu.Item
           name="picks"
-          active={activeItem === "picks"}
+          active={activeItem === 'picks'}
           onClick={this.handleItemClick}
           link
           href="/picks"
@@ -39,7 +39,7 @@ class NavMenu extends React.Component {
 
         <Menu.Item
           name="teams"
-          active={activeItem === "teams"}
+          active={activeItem === 'teams'}
           onClick={this.handleItemClick}
           link
           href="/teams"
