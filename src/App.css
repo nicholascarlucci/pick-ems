@@ -37,6 +37,51 @@
   }
 }
 
+/******** standings table ********/
+
+.standings-table {
+  width: 80%;
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: larger;
+}
+
+.standings-table th {
+  background: #1e2125;
+  font-weight: 500;
+  color: white;
+}
+
+.standings-table tr th:first-child {
+  border-radius: 0.5em 0 0 0;
+}
+
+.standings-table tr th:last-child {
+  border-radius: 0 0.5em 0 0;
+}
+
+.standings-table td {
+  height: 1.5em;
+  text-align: center;
+}
+
+.standings-table tr:nth-child(even) td {
+  background: #f1f1f1;
+}
+
+.standings-table tr:nth-child(odd) td {
+  background: #fefefe;
+}
+
+.standings-table td,
+.standings-table th {
+  border: 1px solid transparent;
+  padding: 0.5em;
+}
+
+/******** end standings table ********/
+
 /******** Overrides for Semantic UI CSS ********/
 
 .ui.menu {

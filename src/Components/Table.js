@@ -1,7 +1,6 @@
 /* eslint-disable react/jsx-filename-extension */
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
-import { Table } from 'semantic-ui-react';
 
 class StandingsTable extends React.Component {
   constructor(props) {
@@ -22,25 +21,20 @@ class StandingsTable extends React.Component {
 
   render() {
     return (
-      <Table celled>
-        <Table.Header>
-          <Table.Row>
-            <Table.HeaderCell>Team Name</Table.HeaderCell>
-            <Table.HeaderCell>Wins</Table.HeaderCell>
-            <Table.HeaderCell>Losses</Table.HeaderCell>
-          </Table.Row>
-        </Table.Header>
-
-        <Table.Body>
-          {this.state.teams.map((team) => (
-            <Table.Row key={team.id}>
-              <Table.Cell>{team.name}</Table.Cell>
-              <Table.Cell>{team.wins}</Table.Cell>
-              <Table.Cell>{team.losses}</Table.Cell>
-            </Table.Row>
-          ))}
-        </Table.Body>
-      </Table>
+      <table className="standings-table">
+        <tr>
+          <th>Team Name</th>
+          <th>Wins</th>
+          <th>Losses</th>
+        </tr>
+        {this.state.teams.map((team) => (
+          <tr key={team.id}>
+            <td>{team.name}</td>
+            <td>{team.wins}</td>
+            <td>{team.losses}</td>
+          </tr>
+        ))}
+      </table>
     );
   }
 }

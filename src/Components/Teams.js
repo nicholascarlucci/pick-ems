@@ -46,9 +46,13 @@ function Teams() {
     <div>
       {teams || 'There is no teams data available'}
       <br />
-      <button type="button" onClick={createTeam}>Add team</button>
+      <button type="button" onClick={createTeam}>
+        Add team
+      </button>
       <br />
-      <button type="button" onClick={deleteTeam}>Delete team</button>
+      <button type="button" onClick={deleteTeam}>
+        Delete team
+      </button>
     </div>
   );
 }
