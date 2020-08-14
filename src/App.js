@@ -2,7 +2,7 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import StandingsTable from './components/Table';
+import StandingsTable from './components/Standings';
 import PicksTable from './components/Picks';
 import NavMenu from './components/NavMenu';
 import Teams from './components/Teams';
