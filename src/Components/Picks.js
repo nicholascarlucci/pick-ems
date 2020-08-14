@@ -32,13 +32,19 @@ const PicksTable = () => (
 
     <Table.Body>
       {picks.map((pick) => (
-
         <Table.Row>
-          <Table.Cell><button type="button" className="ui primary button">{pick.home}</button></Table.Cell>
-          <Table.Cell><button type="button" className="ui button">{pick.away}</button></Table.Cell>
+          <Table.Cell>
+            <button type="button" className="ui primary button">
+              {pick.home}
+            </button>
+          </Table.Cell>
+          <Table.Cell>
+            <button type="button" className="ui button">
+              {pick.away}
+            </button>
+          </Table.Cell>
         </Table.Row>
       ))}
-
     </Table.Body>
 
     <Table.Footer>

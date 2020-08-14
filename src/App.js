@@ -2,10 +2,10 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import StandingsTable from './Components/Table';
-import PicksTable from './Components/Picks';
-import NavMenu from './Components/NavMenu';
-import Teams from './Components/Teams';
+import StandingsTable from './components/Table';
+import PicksTable from './components/Picks';
+import NavMenu from './components/NavMenu';
+import Teams from './components/Teams';
 
 function App() {
   return (
