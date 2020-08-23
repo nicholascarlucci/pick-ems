@@ -82,6 +82,34 @@
 
 /******** end standings table ********/
 
+/******** my picks page ***********/
+
+#pickSheetHeader div {
+  width: 50%;
+  float: left;
+}
+
+#pickSheetHeader div h2 {
+  text-align: center;
+}
+
+.pick-container {
+  width: 50%;
+  float: left;
+  padding: 1em;
+}
+
+.pick-box {
+  width: 75%;
+  margin: auto;
+  border: 1px black solid;
+  border-radius: 0.75em;
+  padding: 10px;
+  height: 75px;
+}
+
+/******** end my picks page ***********/
+
 /******** Overrides for Semantic UI CSS ********/
 
 .ui.menu {

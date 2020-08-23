@@ -3,7 +3,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import StandingsTable from './components/Standings';
-import PicksTable from './components/Picks';
+import PickSheet from './components/PickSheet';
 import NavMenu from './components/NavMenu';
 import Teams from './components/Teams';
 
@@ -20,7 +20,7 @@ function App() {
           </Route>
           <Route exact path="/picks">
             <div style={{ padding: '1em' }} className="container">
-              <PicksTable />
+              <PickSheet />
             </div>
           </Route>
           <Route exact path="/teams">
