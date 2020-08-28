@@ -108,6 +108,24 @@
   height: 75px;
 }
 
+.tiebreaker-box {
+  margin: auto;
+  width: 50%;
+  padding: 375px;
+}
+
+.tiebreaker-btn {
+  margin-right: 60px;
+  width: 50%;
+  float: right;
+}
+
+.pick-box.selected-pick {
+  background-color: blue;
+  color: white;
+  border: 1px solid white;
+}
+
 /******** end my picks page ***********/
 
 /******** Overrides for Semantic UI CSS ********/
